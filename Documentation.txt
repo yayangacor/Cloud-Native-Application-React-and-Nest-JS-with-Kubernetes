@@ -1,0 +1,11 @@
+https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs
+https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
+https://kubernetes.io/id/docs/concepts/services-networking/service/
+https://kubernetes.io/docs/concepts/services-networking/ingress/
+https://kubernetes.io/docs/concepts/configuration/secret/
+https://kubernetes.github.io/ingress-nginx/user-guide/ingress-path-matching/
+https://dev.to/bladearya/dockerizing-your-frontend-application-with-nginx-for-seamless-deployment-3501
+https://docs.nestjs.com/deployment
+https://dev.to/vineethtrv/dockerizing-a-react-application-with-nginx-3cn2
+https://learn.microsoft.com/en-us/cli/azure/aks/approuting?view=azure-cli-latest
+https://learn.microsoft.com/en-us/azure/aks/app-routing

@@ -1,0 +1,60 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+}
+
+enum Role {
+  USER
+  GUEST
+  ADMIN
+}
+
+model User {
+  userId   String  @id @default(uuid())
+  username String  @db.VarChar(55)
+  email    String  @unique @db.VarChar(255)
+  password String  @db.VarChar(255)
+  country  String  @db.VarChar(55)
+  role     Role    @default(USER)
+
+  runs     Run[]
+  comments RunComment[]
+}
+
+model Game {
+  gameId          String @id @default(uuid())
+  gameName        String
+  gameDescription String
+
+  runs Run[]
+}
+
+model Run {
+  runId       String   @id @default(uuid())
+  gameId      String
+  userId      String
+  vodUrl      String
+  runDuration BigInt
+  submittedAt DateTime @default(now())
+
+  game     Game         @relation(fields: [gameId], references: [gameId], onDelete: Cascade, onUpdate: Cascade)
+  user     User         @relation(fields: [userId], references: [userId], onDelete: Cascade, onUpdate: Cascade)
+  comments RunComment[]
+}
+
+model RunComment {
+  commentId String   @id @default(uuid())
+  runId     String
+  userId    String
+  comment   String
+  createdAt DateTime @default(now())
+
+  run  Run  @relation(fields: [runId], references: [runId], onDelete: Cascade, onUpdate: Cascade)
+  user User @relation(fields: [userId], references: [userId], onDelete: Cascade, onUpdate: Cascade)
+}
