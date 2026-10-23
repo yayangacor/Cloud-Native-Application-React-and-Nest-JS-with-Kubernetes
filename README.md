@@ -1,6 +1,6 @@
-# WSpeedrun.com di Azure Kubernetes Service
+# React and Nest JS Web di Azure Kubernetes Service
 
-Jawaban Variant 1: aplikasi WSpeedrun (frontend React + backend NestJS) di-deploy ke AKS dengan Terraform, Docker, Azure Container Registry, dan Kubernetes manifest. Database memakai Azure Database for MySQL yang hanya bisa diakses lewat Private Endpoint.
+frontend React + backend NestJS di-deploy ke AKS dengan Terraform, Docker, Azure Container Registry, dan Kubernetes manifest. Database memakai Azure Database for MySQL yang hanya bisa diakses lewat Private Endpoint.
 
 ## Struktur
 
